@@ -4,6 +4,8 @@
 
 --Zen Mode
 vim.keymap.set("n", "<leader>zz", ":ZenMode<CR>") -- toggle Zen Mode
+
+--PencilSoft toggle
 vim.keymap.set("n", "<leader>ps", ":PencilSoft<CR>") -- toggle PencilSoft
 
 -- Use jj to esc insert mode
@@ -12,6 +14,37 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "escapes with jj" })
 --  Save file
 vim.keymap.set("n", "<leader>ww", ":w!<CR>", { desc = "Save File", noremap = true, silent = true })
 
+-- Use <leader>tu (Text-Uppercase) to convert current word to upper case
+vim.keymap.set(
+  { "n", "o" },
+  "<leader>tu",
+  "gUiw",
+  { noremap = true, silent = true, desc = "change current word to uppercase" }
+)
+
+-- Use <leader>ta (Text-Uppercase-visual mode) to convert selected text to upper case
+vim.keymap.set(
+  { "v", "o" },
+  "<leader>ta",
+  "gU",
+  { noremap = true, silent = true, desc = "change selected text to uppercase" }
+)
+
+--Find and replace text in visual-block
+vim.keymap.set(
+  "v",
+  "<leader>r",
+  ":s///g<Left><Left><Left>",
+  { desc = "replace selected text in visual block ", noremap = true, silent = true }
+)
+
+--Find a replace text all (in file)
+vim.keymap.set(
+  "n",
+  "<leader>rr",
+  ":%s///g<Left><Left><Left>",
+  { desc = "replace selected text whole file", noremap = true, silent = true }
+)
 -- Resize with arrows
 vim.keymap.set("n", "<Up>", ":resize -2<CR>", { desc = "resize-up", noremap = true, silent = true })
 vim.keymap.set("n", "<Down>", ":resize +2<CR>", { desc = "resize-down", noremap = true, silent = true })
