@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-# Script to open/toggle impala in a floating kitty window on Hyprland
+# Script to open/toggle gazelle in a floating kitty window on Hyprland
 
 # Toggle: if already open, close it
 if hyprctl clients -j | grep -q '"class": "wifi-tui"'; then
