@@ -197,8 +197,8 @@ ls.add_snippets("css", {
   --Css reset
   s(
     {
-      trig = "reset",
-      dscr = "css reset values",
+      trig = "reset-1",
+      dscr = "css reset spacing",
     },
     fmt(
       [[ 
@@ -208,9 +208,19 @@ ls.add_snippets("css", {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-      }}
-      
-      
+      }} 
+      ]],
+      {}
+    )
+  ),
+
+  s(
+    {
+      trig = "reset-2",
+      dscr = "css reset values",
+    },
+    fmt(
+      [[ 
       /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
       ul[role='list'],
       ol[role='list'] {{
@@ -369,11 +379,11 @@ ls.add_snippets("css", {
     },
     fmt(
       [[
-       @import url('https://fonts.googleapis.com/css2?family={}:wght@100...900{});
+       @import url('https://fonts.googleapis.com/css2?family={}:wght@100...900{}');
 
        body {{
          font-family: '{}', {};
-         }}
+       }}
       ]],
       {
         i(1, "Poppins"),

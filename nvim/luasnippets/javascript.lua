@@ -49,6 +49,20 @@ ls.add_snippets("javascript", {
       }
     )
   ),
+  s(
+    {
+      trig = "invar",
+      dscr = "variable input",
+    },
+    fmt(
+      [=[
+        ${{{}}}
+      ]=],
+      {
+        i(1, "name"),
+      }
+    )
+  ),
   --Initiate Variable
   s(
     {
@@ -67,6 +81,30 @@ ls.add_snippets("javascript", {
         }),
         i(2, "x"),
         i(3, "5"),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "func",
+      dscr = "javacript function",
+    },
+    fmt(
+      [=[
+        function {}({}) {{
+          {};
+        }}
+
+        {}({});{}
+
+      ]=],
+      {
+        i(1, "funcName"),
+        i(2, "param"),
+        i(3, "funcBody"),
+        rep(1),
+        i(4, "argum"),
+        i(0),
       }
     )
   ),
@@ -133,7 +171,8 @@ ls.add_snippets("javascript", {
       [=[
         const {} = {{
           {}: {},
-          {}: {}
+          {}: {},
+          {}
         }};
       ]=],
 
@@ -143,6 +182,84 @@ ls.add_snippets("javascript", {
         i(3, "'John Doe'"),
         i(4, "age"),
         i(5, "30"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    -- object key-value pair string
+    {
+      trig = "okvs",
+      dscr = "object key value pair (string)",
+    },
+    fmt(
+      [=[
+        {}: "{}",{}
+      ]=],
+      {
+        i(1, "name"),
+        i(2, "John"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    -- object key-value number/boolean
+    {
+      trig = "okvn",
+      dscr = "object key value pair (number/boolean)",
+    },
+    fmt(
+      [=[
+        {}: {},{}
+      ]=],
+      {
+        i(1, "value"),
+        i(2, "1"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "array",
+      dscr = "array snippet",
+    },
+    fmt(
+      [=[
+        [ {}, {}, {} ]
+      ]=],
+      {
+        i(1, "object-1"),
+        i(2, "object-2"),
+        i(3, "object-3"),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "forloop",
+      dscr = "for loop",
+    },
+    fmt(
+      [=[
+        for(let {} = 0; {} {} {}; {}++){{
+          {}
+        }}
+      ]=],
+      {
+        i(1, "i"),
+        rep(1),
+        c(2, {
+          t("<"),
+          t(">"),
+          t("="),
+          t("<="),
+          t(">="),
+        }),
+        i(3, "5"),
+        rep(1),
+        i(0),
       }
     )
   ),
