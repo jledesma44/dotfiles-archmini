@@ -5,6 +5,7 @@
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": [
     // "custom/weather",
+    "custom/audio-output",
     "pulseaudio",
     "battery",
     "temperature",
@@ -89,6 +90,14 @@
     "format-critical": "{temperatureC}°C (CRITICAL!)",
     "tooltip": true,
     "interval": 10
+  },
+
+  "custom/audio-output": {
+    "exec": "$HOME/.config/waybar/scripts/audio-output.zsh",
+    "return-type": "json",
+    "interval": 3,
+    "on-click": "$HOME/.local/bin/toggle-audio.zsh",
+    "signal": 9
   },
 
   "pulseaudio": {

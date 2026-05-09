@@ -17,3 +17,5 @@ else
     pactl set-default-sink "$HDMI_SINK"
     notify-send -i audio-headphones "Audio" "Switched to monitor 3.5mm jack"
 fi
+
+pkill -SIGRTMIN+9 waybar
