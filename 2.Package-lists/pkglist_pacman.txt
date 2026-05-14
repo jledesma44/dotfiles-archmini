@@ -1,3 +1,4 @@
+alsa-tools
 awww
 baobab
 base
@@ -13,6 +14,8 @@ chromium
 d-spy
 dconf-editor
 decibels
+dkms
+dosfstools
 efibootmgr
 endeavour
 epiphany
@@ -23,7 +26,6 @@ file-roller
 firefox
 firefox-developer-edition
 fzf
-gazelle-tui
 gdm
 ghex
 git
@@ -84,7 +86,7 @@ gvfs-wsdd
 hypridle
 hyprland
 hyprlock
-hyprpanel
+hyprpaper
 inotify-tools
 intel-ucode
 jq
@@ -94,23 +96,23 @@ kvantum
 kvantum-qt5
 lazygit
 libpulse
-librewolf-bin
 lightsoff
 limine
 linux
 linux-firmware
 linux-lts
 linux-zen
+linux-zen-headers
 loupe
 luarocks
 malcontent
 manuals
-matugen-bin
 nautilus
 neovim
 networkmanager
 nodejs
 npm
+nwg-displays
 nwg-look
 openssh
 orca
@@ -121,7 +123,6 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 power-profiles-daemon
-python-pywal16
 qt5-wayland
 qt6-wayland
 quadrapassel
@@ -151,10 +152,9 @@ ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
 udiskie
-vscodium-bin
 waybar
+wget
 wireplumber
-wlogout
 wofi
 wpa_supplicant
 xclip
@@ -162,8 +162,6 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland
 xdg-user-dirs-gtk
 xsel
-yay-bin
-yay-bin-debug
 yelp
 zram-generator
 zsh
