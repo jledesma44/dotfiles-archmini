@@ -11,7 +11,7 @@ case "$default_sink" in
         echo "{\"text\": \"󰂯 ${name:-Bluetooth}\", \"tooltip\": \"Bluetooth: ${name:-unknown}\", \"class\": \"bluetooth\"}"
         ;;
     *analog*)
-        echo '{"text": "󰕾 MacBook", "tooltip": "MacBook built-in audio", "class": "analog"}'
+        echo '{"text": "󰕾 Mac Mini", "tooltip": "Mac Mini 3.5mm", "class": "analog"}'
         ;;
     *)
         echo '{"text": "󰕾 Audio", "tooltip": "'"$default_sink"'", "class": "unknown"}'
