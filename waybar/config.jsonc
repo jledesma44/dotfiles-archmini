@@ -83,8 +83,8 @@
   // },
 
   "temperture": {
-    //Macbook12 temperture
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    //Mac Mini 2012 CPU package temp
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
     "critical-threshold": 90,
     "format": "{temperatureC}°C",
     "format-critical": "{temperatureC}°C (CRITICAL!)",
