@@ -4,6 +4,7 @@
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 PACMAN_LIST="$HOME/.dotfiles/2.Package-lists/pkglist_pacman.txt"
@@ -24,9 +25,19 @@ sudo pacman -S --noconfirm --needed - < "$PACMAN_LIST"
 # Install yay AUR helper if not already installed
 if ! command -v yay &>/dev/null; then
     echo -e "\n${BLUE}==> Installing yay AUR helper...${NC}"
+    sudo pacman -S --noconfirm --needed base-devel git
     BUILD_DIR=$(mktemp -d)
-    git clone https://aur.archlinux.org/yay-bin "$BUILD_DIR/yay-bin"
-    (cd "$BUILD_DIR/yay-bin" && makepkg -si --noconfirm)
+    if git clone https://aur.archlinux.org/yay-bin.git "$BUILD_DIR/yay-bin"; then
+        if ! (cd "$BUILD_DIR/yay-bin" && makepkg -si --noconfirm); then
+            echo -e "${RED}  Error: Failed to build/install yay-bin${NC}"
+            rm -rf "$BUILD_DIR"
+            exit 1
+        fi
+    else
+        echo -e "${RED}  Error: Failed to clone yay-bin repository${NC}"
+        rm -rf "$BUILD_DIR"
+        exit 1
+    fi
     rm -rf "$BUILD_DIR"
 else
     echo -e "\n${BLUE}==> yay already installed, skipping clone/build...${NC}"
