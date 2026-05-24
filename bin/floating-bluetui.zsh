@@ -24,6 +24,6 @@ fi
 # Launch bluetui in floating kitty window
 kitty --class floating-bluetui \
   --title "Bluetooth Manager" \
-  -o initial_window_width=800 \
-  -o initial_window_height=600 \
+  -o initial_window_width=1400 \
+  -o initial_window_height=800 \
   bluetui
