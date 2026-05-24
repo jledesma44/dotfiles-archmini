@@ -14,6 +14,14 @@
   background-image: image(url("../icons/logout-hover.png"));
 }
 
+#hibernate {
+  background-image: image(url("../icons/hibernate.png"));
+}
+
+#hibernate:hover {
+  background-image: image(url("../icons/hibernate-hover.png"));
+}
+
 #suspend {
   background-image: image(url("../icons/sleep.png"));
 }
