@@ -25,6 +25,7 @@
     ~/.config/opencode:
     ~/.config/pulse:
     ~/.config/rofi:
+    ~/.config/swaylock:
     ~/.config/waybar:
     ~/Pictures:
 
