@@ -1,4 +1,3 @@
-
 ;;Nuphy-air-75
 (defcfg
   input (device-file "/dev/input/by-id/usb-Nordic_Semiconductor_NuPhy_Air75_V2_Dongle-event-kbd")
@@ -40,7 +39,7 @@
   fg (cmd-button "sh -c 'hyprctl clients | grep -q \"class: figma.com__-Default\" && hyprctl dispatch workspace 7 || (hyprctl dispatch exec \"[workspace 7 silent] chromium --app=\"https://figma.com\"\" && hyprctl dispatch workspace 7)'")
   vs (cmd-button "sh -c 'hyprctl clients | grep -q \"class: code\" && hyprctl dispatch workspace 8 || (hyprctl dispatch exec \"[workspace 8 silent] code\" && hyprctl dispatch workspace 8)'")
   pas (cmd-button "sh -c 'hyprctl clients | grep -q \"class: 1password\" && hyprctl dispatch workspace 9 || (hyprctl dispatch exec \"[workspace 9 silent] 1password\" && hyprctl dispatch workspace 9)'")
-  spy (cmd-button "sh -c 'hyprctl clients | grep -q \"class: spotify\" && hyprctl dispatch workspace 10 || (hyprctl dispatch exec \"[workspace 10 silent] spotify\" && hyprctl dispatch workspace 10)'")
+  spy (cmd-button "sh -c 'hyprctl clients | grep -qi \"class: spotify\" && hyprctl dispatch workspace 10 || (hyprctl dispatch exec \"[workspace 10 silent] spotify-launcher\" && hyprctl dispatch workspace 10)'")
   thr (cmd-button "sh -c 'hyprctl clients | grep -q \"class: thunar\" && hyprctl dispatch workspace 11 || (hyprctl dispatch exec \"[workspace 11 silent] thunar\" && hyprctl dispatch workspace 11)'")
 )
 
