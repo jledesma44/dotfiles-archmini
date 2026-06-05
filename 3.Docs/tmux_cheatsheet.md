@@ -27,3 +27,9 @@
 ```
 
 ```
+
+1. Create a new session in a bash shell
+
+```
+:new -s "Session-Name" /bin/bash
+```
