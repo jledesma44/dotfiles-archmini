@@ -8,13 +8,13 @@
 
 window {
   color: #ffffff; /*text*/
-  background-image: url("/home/jledesma44/Pictures/wallpaper/mountain.jpg");
+  background-image: url("/home/jledesma44/Pictures/wallpaper/lost-city.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: none;
-  /*background-color: alpha(@surface, 0.6);*/
-  background-color: rgba(12, 12, 12, 0.3);
+  background-color: alpha(@surface, 0.6);
+  /* background-color: rgba(12, 12, 12, 0.3); */
 }
 
 button {
@@ -22,7 +22,7 @@ button {
   color: #fff;
   background-position: center;
   background-size: 20%;
-  background-color: transparent;
+  background-color: rgba(12, 12, 12, 0.5);
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.15, 0, 0.1, 1);
   box-shadow: 0 0 10px 2px transparent;
